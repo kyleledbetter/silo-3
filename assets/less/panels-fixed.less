@@ -1,0 +1,94 @@
+//
+// Fixed Panels
+// --------------------------------------------------
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+body > .content,
+body > .content > .row,
+body > .content > .row > [class^="col-"]{
+	position: relative;
+	height: 100%;
+}
+.panel {
+	min-height: 100%;
+	position: relative;
+
+	&> input[type=search] {
+		.opacity (0.9);
+		z-index: 2;
+		position: relative;
+
+		&:focus {
+			.opacity (1);
+		}
+	} 
+	&> .panel-avatar {
+		display: block;
+	}
+	&> .panel-heading {
+
+	}
+
+	&> .panel-body,
+	&> .list-group {
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		position: absolute;
+		top: 41px;
+		bottom: 113px;
+		z-index: 1;
+
+		&> .list-group-item:last-of-type {
+			margin-bottom: 75px;
+		}
+	}
+
+	&> textarea,
+	&> .panel-footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+	}
+	.hasDatepicker {
+		position: absolute;
+		bottom: 100px;
+		z-index: 3;
+	}
+}
+[class^="col-"]:first-of-type > .panel {
+	border-radius: @border-radius-base 0 0 @border-radius-base;
+
+	& > .panel-heading {
+		border-top-right-radius: 0;
+	}
+	& > .panel-footer {
+		border-bottom-right-radius: 0;
+	}
+	textarea {
+		border-bottom-left-radius: @border-radius-base;
+	}
+}
+[class^="col-"] + [class^="col-"] > .panel {
+	border-radius: 0;
+
+	& > .panel-heading {
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+}
+[class^="col-"]:last-of-type > .panel {
+	border-radius: 0 @border-radius-base @border-radius-base 0;
+
+	& > .panel-heading {
+		border-top-right-radius: @border-radius-base - 1;
+	}
+	textarea {
+		border-bottom-right-radius: @border-radius-base;
+	}
+}
