@@ -8,7 +8,7 @@ html, body {
 }
 body > .content,
 body > .content > .row,
-body > .content > .row > [class^="col-"]{
+body > .content > .row > [class^="col-"] {
 	position: relative;
 	height: 100%;
 }
@@ -16,7 +16,8 @@ body > .content > .row > [class^="col-"]{
 	min-height: 100%;
 	position: relative;
 
-	&> input[type=search] {
+	&> input[type=search],
+	&> textarea {
 		.opacity (0.9);
 		z-index: 2;
 		position: relative;
@@ -30,16 +31,20 @@ body > .content > .row > [class^="col-"]{
 	}
 	&> .panel-heading {
 
+		&:hover {
+			cursor: move;
+		}
 	}
 
-	&> .panel-body,
 	&> .list-group {
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		position: absolute;
+		padding-top: 27px;
+		padding-bottom: 80px;
 		top: 41px;
-		bottom: 113px;
+		bottom: 20px;
 		z-index: 1;
 
 		&> .list-group-item:last-of-type {
@@ -50,10 +55,22 @@ body > .content > .row > [class^="col-"]{
 	&> textarea,
 	&> .panel-footer {
 		position: absolute;
-		bottom: 0;
 		left: 0;
 		right: 0;
 		z-index: 2;
+	}
+	&> textarea {
+		bottom: 41px;
+		height: 30px;
+		.transition (height 0.35s linear);
+
+		&:focus {
+			height: 90px;
+		}
+	}
+	&> .panel-footer {
+		bottom: 0;
+		padding: 6px 12px;
 	}
 	.hasDatepicker {
 		position: absolute;
@@ -70,9 +87,6 @@ body > .content > .row > [class^="col-"]{
 	& > .panel-footer {
 		border-bottom-right-radius: 0;
 	}
-	textarea {
-		border-bottom-left-radius: @border-radius-base;
-	}
 }
 [class^="col-"] + [class^="col-"] > .panel {
 	border-radius: 0;
@@ -81,14 +95,18 @@ body > .content > .row > [class^="col-"]{
 		border-top-right-radius: 0;
 		border-top-left-radius: 0;
 	}
+	& > .panel-footer {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
 }
 [class^="col-"]:last-of-type > .panel {
 	border-radius: 0 @border-radius-base @border-radius-base 0;
 
 	& > .panel-heading {
-		border-top-right-radius: @border-radius-base - 1;
+		border-top-right-radius: @border-radius-base - 2;
 	}
-	textarea {
-		border-bottom-right-radius: @border-radius-base;
+	& > .panel-footer {
+		border-bottom-right-radius: @border-radius-base - 2;
 	}
 }

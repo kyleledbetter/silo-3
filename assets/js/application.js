@@ -27,7 +27,7 @@ $(function(){
 		return false;
 	});
 	// Activate tooltip
-    $("[data-toggle='tooltip']").tooltip();
+    $("[data-toggle='tooltip'], .has-tooltip").tooltip({container: "body"});
     // Animate progress bars
     $(function(){
 			$('.progress .progress-bar').each(function() {

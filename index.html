@@ -26,10 +26,10 @@
 	<!-- begin content -->
 	<div class="content">
 		
-		<div class="row">
+		<div id="sortable" class="row">
 			<!-- begin column -->
-			<div class="col-xs-1">
-				<div class="panel panel-primary panel-primary-body">
+			<div class="col-xs-sidebar">
+				<div class="panel panel-inverse panel-primary-body">
 					<div class="panel-heading clearfix">
 						<div class="btn-toolbar btn-controls text-center">
 							<div class="btn-group">
@@ -45,28 +45,36 @@
 					</div>
 					<div class="panel-body text-center" style="width:100%">
 						<a href="#" class="panel-avatar">
-							<img class="img-circle" src="assets/images/avatars/michael_128.jpg" width="64" alt="...">
+							<img class="img-circle img-user img-active" src="assets/images/avatars/michael_128.jpg" width="100%" alt="...">
 						</a>
-						<div class="btn-group-vertical push-top">
-							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-attachment"></span></a>
-							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-link"></span></a>
-							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-checkbox-checked-2"></span></a>
-							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-calendar"></span></a>
-							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-code"></span></a>
+						<div class="btn-group-vertical push-top-sm">
+							<a href="#" class="btn btn-primary btn-lg active"><span aria-hidden="true" class="icon-bubble text-20"></span></a>
+							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-attachment text-20"></span></a>
+							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-link text-20"></span></a>
+							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-checkbox-checked-2 text-20"></span></a>
+							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-calendar text-20"></span></a>
+							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-file-3 text-20"></span></a>
+							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-code text-20"></span></a>
+							<a href="#" class="btn btn-primary btn-lg"><span aria-hidden="true" class="icon-camera text-20"></span></a>
 						</div>
 					</div>
 					<div class="panel-footer">
-					<a href="#" class="btn btn-primary btn-xs"><span aria-hidden="true" class="icon-plus text-md"></span></a>
+						<div class="dropup">
+							<a href="#"  data-toggle="dropdown" class="btn btn-inverse btn-sm btn-block dropdown-toggle has-tooltip" title="New Silo" data-placement="bottom"><span aria-hidden="true" class="icon-plus text-md"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">New Silo</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end column -->
 			<!-- begin column -->
-			<div class="col-xs-4">
-				<div class="panel panel-primary">
+			<div class="col-xs-4 ui-state-default">
+				<div class="panel panel-inverse">
 					<div class="panel-heading clearfix">
 						<div class="dropdown pull-right">
-							<a data-toggle="dropdown" class="text-white" href="#"><span aria-hidden="true" class="icon-cog"></span></a>
+							<a data-toggle="dropdown" class="text-white" href="#"><span aria-hidden="true" class="icon-cog text-xl"></span></a>
 							<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
 								<li><a href="#">Share Chat</a></li>
 								<li><a href="#">Close Chat</a></li>
@@ -77,12 +85,12 @@
 						<h3 class="panel-title">Team Chat</h3>
 					</div>
 					<input type="search" placeholder="search" class="form-control" />
-					<div class="list-group list-group-striped">
+					<ul class="list-group list-group-striped papercut">
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/lucille_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/lucille_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<div class="dropdown pull-right">
@@ -105,13 +113,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-active" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">10:48 AM</a>
@@ -126,13 +134,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/buster_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-available" src="assets/images/avatars/buster_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:05 AM</a>
@@ -150,13 +158,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/gob_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/gob_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:05 AM</a>
@@ -172,13 +180,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:47 AM</a>
@@ -214,13 +222,13 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">12:33 PM</a>
@@ -250,13 +258,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/lucille_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-available" src="assets/images/avatars/lucille_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<div class="dropdown pull-right">
@@ -279,13 +287,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-active" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">10:47 AM</a>
@@ -314,13 +322,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">10:48 AM</a>
@@ -335,13 +343,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:02 AM</a>
@@ -386,13 +394,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/buster_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/buster_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:05 AM</a>
@@ -410,13 +418,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/george_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/george_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:05 AM</a>
@@ -432,20 +440,28 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
-					</div>
-					<textarea class="form-control magic-box" rows="5" placeholder="Enter chat, task, event, or drop file here. Use the @ sign for member names and # sign for tags"></textarea>
+					</ul>
+					<textarea class="form-control magic-box" data-toggle="tooltip" data-placement="bottom" title="Use the @ sign for member names and # sign for tags" rows="5" placeholder="Enter chat, task, event, or drop file(s)"></textarea>
 					<div class="datepick-1"></div>
+					<div class="panel-footer">
+						<div class="btn-group">
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Add or remove users" data-placement="bottom"><span aria-hidden="true" class="icon-users text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Share screen" data-placement="bottom"><span aria-hidden="true" class="icon-screen text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Start hangout voice" data-placement="bottom"><span aria-hidden="true" class="icon-phone text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Start hangout video" data-placement="bottom"><span aria-hidden="true" class="icon-camera text-xl"></span></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end column -->
 			<!-- begin column -->
-			<div class="col-xs-4">
-				<div class="panel panel-primary">
+			<div class="col-xs-4 ui-state-default">
+				<div class="panel panel-inverse">
 					<div class="panel-heading clearfix">
 						<div class="dropdown pull-right">
-							<a data-toggle="dropdown" class="text-white" href="#"><span aria-hidden="true" class="icon-cog"></span></a>
+							<a data-toggle="dropdown" class="text-white" href="#"><span aria-hidden="true" class="icon-cog text-xl"></span></a>
 							<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
 								<li><a href="#">Share Chat</a></li>
 								<li><a href="#">Close Chat</a></li>
@@ -453,15 +469,15 @@
 								<li><a href="#">Leave Chat</a></li>
 							</ul>
 						</div>
-						<h3 class="panel-title">Private Chat</h3>
+						<h3 class="panel-title"><span aria-hidden="true" class="icon-lock"></span> Private Chat</h3>
 					</div>
 					<input type="search" placeholder="search" class="form-control" />
-					<div class="list-group list-group-striped">
+					<ul class="list-group list-group-striped papercut">
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">10:48 AM</a>
@@ -476,13 +492,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/lucille_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/lucille_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">10:59 AM</a>
@@ -496,13 +512,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/buster_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/buster_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:05 AM</a>
@@ -520,13 +536,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/gob_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/gob_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:05 AM</a>
@@ -542,13 +558,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">12:33 PM</a>
@@ -578,13 +594,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/lindsay_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/lindsay_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">05:43 PM</a>
@@ -605,20 +621,28 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
-					</div>
-					<textarea class="form-control magic-box" rows="5" placeholder="Enter chat, task, event, or drop file here. Use the @ sign for member names and # sign for tags"></textarea>
+					</ul>
+					<textarea class="form-control magic-box" data-toggle="tooltip" data-placement="bottom" title="Use the @ sign for member names and # sign for tags" rows="5" placeholder="Enter chat, task, event, or drop file(s)"></textarea>
 					<div class="datepick-2"></div>
+					<div class="panel-footer">
+						<div class="btn-group">
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Add or remove users" data-placement="bottom"><span aria-hidden="true" class="icon-users text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Share screen" data-placement="bottom"><span aria-hidden="true" class="icon-screen text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Start hangout voice" data-placement="bottom"><span aria-hidden="true" class="icon-phone text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Start hangout video" data-placement="bottom"><span aria-hidden="true" class="icon-camera text-xl"></span></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end column -->
 			<!-- begin column -->
-			<div class="col-xs-3">
-				<div class="panel panel-primary">
+			<div class="col-xs-3 ui-state-default">
+				<div class="panel panel-inverse">
 					<div class="panel-heading clearfix">
 						<div class="dropdown pull-right">
-							<a data-toggle="dropdown" class="text-white" href="#"><span aria-hidden="true" class="icon-cog"></span></a>
+							<a data-toggle="dropdown" class="text-white" href="#"><span aria-hidden="true" class="icon-cog text-xl"></span></a>
 							<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
 								<li><a href="#">Share Chat</a></li>
 								<li><a href="#">Close Chat</a></li>
@@ -629,12 +653,12 @@
 						<h3 class="panel-title">Personal Notes</h3>
 					</div>
 					<input type="search" placeholder="search" class="form-control" />
-					<div class="list-group list-group-striped">
+					<ul class="list-group list-group-striped papercut">
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">10:48 AM</a>
@@ -649,13 +673,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/lucille_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/lucille_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">10:59 AM</a>
@@ -669,13 +693,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/buster_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/buster_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:05 AM</a>
@@ -693,13 +717,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/gob_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/gob_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">11:05 AM</a>
@@ -715,13 +739,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">12:33 PM</a>
@@ -751,13 +775,13 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
 						<!-- begin item -->
-						<div class="list-group-item">
+						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle" src="assets/images/avatars/lindsay_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/lindsay_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">05:43 PM</a>
@@ -778,11 +802,19 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 						<!-- end item -->
-					</div>
-					<textarea class="form-control magic-box" rows="5" placeholder="Enter chat, task, event, or drop file here. Use the @ sign for member names and # sign for tags"></textarea>
+					</ul>
+					<textarea class="form-control magic-box" data-toggle="tooltip" data-placement="bottom" title="Use the @ sign for member names and # sign for tags" rows="5" placeholder="Enter chat, task, event, or drop file(s)"></textarea>
 					<div class="datepick-2"></div>
+					<div class="panel-footer">
+						<div class="btn-group">
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Add or remove users" data-placement="bottom"><span aria-hidden="true" class="icon-users text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Share screen" data-placement="bottom"><span aria-hidden="true" class="icon-screen text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Start hangout voice" data-placement="bottom"><span aria-hidden="true" class="icon-phone text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Start hangout video" data-placement="bottom"><span aria-hidden="true" class="icon-camera text-xl"></span></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end column -->
@@ -813,7 +845,7 @@
 				<div class="modal-header">
 					<div class="media">
 						<a class="pull-left" href="#">
-							<img class="media-object img-circle" src="assets/images/avatars/tobias_128.jpg" alt="..." width="28">
+							<img class="media-object img-circle img-default" src="assets/images/avatars/tobias_128.jpg" alt="..." width="28">
 						</a>
 						<div class="media-body">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -843,6 +875,22 @@
 			increaseArea: '20%' // optional
 		});
 	});
+	</script>
+
+	<link href="assets/css/stroll.min.css" rel="stylesheet">
+	<script src="assets/js/stroll.min.js"></script>
+	<script>
+		$(function() {
+			stroll.bind( '.list-group' );
+		});
+	</script>
+
+	<script src="assets/js/jquery-ui.custom.min.js"></script>
+	<script>
+		$(function() {
+			$( "#sortable" ).sortable({ handle: ".panel-heading" });
+			$( "#sortable" ).disableSelection();
+		});
 	</script>
 </body>
 </html>
