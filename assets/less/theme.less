@@ -17,6 +17,9 @@ a {
 		text-decoration: none;
 	}
 }
+label {
+	font-weight: normal;
+}
 .panel {
   .box-shadow (0 0 10px rgba(0, 0, 0, 0.4));
 }
@@ -333,6 +336,20 @@ a {
 /* iCheckbox */
 .text-center > [class*="icheckbox"] {
   margin: 0 auto;
+}
+.text-checked {
+	text-decoration: line-through;
+}
+// Reveal Item On Hover
+.reveal-hover {
+	visibility: hidden;
+	.opacity (0);
+	.transition (all 0.25s linear);
+
+	*:hover > & {
+		visibility: visible;
+		.opacity (1);
+	}
 }
 /* jQuery UI */
 @-webkit-keyframes pulse {

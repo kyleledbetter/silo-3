@@ -62,8 +62,60 @@
 						<div class="dropup">
 							<a href="#"  data-toggle="dropdown" class="btn btn-inverse btn-sm btn-block dropdown-toggle has-tooltip" title="New Silo" data-placement="bottom"><span aria-hidden="true" class="icon-plus text-md"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">New Silo</a></li>
+								<li><a href=".slide-column" data-toggle="slide">New Silo</a></li>
 							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end column -->
+			<!-- begin column -->
+			<div class="col-xs-4 ui-state-default slide slide-column">
+				<div class="panel panel-inverse">
+					<div class="panel-heading clearfix">
+						<div class="dropdown pull-right">
+							<a data-toggle="dropdown" class="text-white" href="#"><span aria-hidden="true" class="icon-cog text-xl"></span></a>
+							<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+								<li><a href="#">Share Chat</a></li>
+								<li><a href="#">Close Chat</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Leave Chat</a></li>
+							</ul>
+						</div>
+						<h3 class="panel-title"><span aria-hidden="true" class="icon-lock"></span> New Chat</h3>
+					</div>
+					<input type="search" placeholder="search" class="form-control" />
+					<ul class="list-group list-group-striped papercut">
+						<!-- begin item -->
+						<li class="list-group-item list-group-item-1" style="display:none">
+							<div class="media">
+								<a href="#" class="pull-left">
+									<img class="media-object img-circle img-default" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
+								</a>
+								<div class="media-body">
+									<a href="#" class="text-date">10:48 AM</a>
+									<a href="#" class="media-heading">Michael Bluth</a>
+									<div class="media-text">
+										Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+									</div>
+									<ul class="tags">
+										<li><a href="#" class="tag">HTML</a></li>
+										<li><a href="#" class="tag">CSS</a></li>
+										<li><a href="#" class="tag">JavaScript</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- end item -->
+					</ul>
+					<textarea class="form-1 form-control magic-box" data-toggle="tooltip" data-placement="bottom" title="Use the @ sign for member names and # sign for tags" rows="5" placeholder="Enter chat, task, event, or drop file(s)"></textarea>
+					<div class="datepick-2"></div>
+					<div class="panel-footer">
+						<div class="btn-group">
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Add or remove users" data-placement="bottom"><span aria-hidden="true" class="icon-users text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Share screen" data-placement="bottom"><span aria-hidden="true" class="icon-screen text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Start hangout voice" data-placement="bottom"><span aria-hidden="true" class="icon-phone text-xl"></span></a>
+							<a href="#modal-users" data-toggle="modal" class="btn btn-inverse btn-sm has-tooltip" title="Start hangout video" data-placement="bottom"><span aria-hidden="true" class="icon-camera text-xl"></span></a>
 						</div>
 					</div>
 				</div>
@@ -504,8 +556,10 @@
 									<a href="#" class="text-date">10:59 AM</a>
 									<a href="#" class="media-heading">Lucille Bluth</a>
 									<div class="media-text">
+										<label class="text-checked">
 										<input type="checkbox" checked />
 										Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+										</label>
 									</div>
 									<ul class="tags">
 										<li><a href="#" class="tag">task</a></li>
@@ -650,7 +704,7 @@
 								<li><a href="#">Leave Chat</a></li>
 							</ul>
 						</div>
-						<h3 class="panel-title">Personal Notes</h3>
+						<h3 class="panel-title">Personal Notes &amp; Todos</h3>
 					</div>
 					<input type="search" placeholder="search" class="form-control" />
 					<ul class="list-group list-group-striped papercut">
@@ -658,18 +712,18 @@
 						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle img-default" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-active" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">10:48 AM</a>
 									<a href="#" class="media-heading">Michael Bluth</a>
 									<div class="media-text">
-										Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+										<h3>Note heading H3</h3>
+										<h4>note subheading H4</h4>
+										<blockquote>You can use markdown in notes!</blockquote>
 									</div>
 									<ul class="tags">
-										<li><a href="#" class="tag">HTML</a></li>
-										<li><a href="#" class="tag">CSS</a></li>
-										<li><a href="#" class="tag">JavaScript</a></li>
+										<li><a href="#" class="tag">note</a></li>
 									</ul>
 								</div>
 							</div>
@@ -679,94 +733,42 @@
 						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle img-default" src="assets/images/avatars/lucille_128.jpg" width="32" alt="...">
-								</a>
-								<div class="media-body">
-									<a href="#" class="text-date">10:59 AM</a>
-									<a href="#" class="media-heading">Lucille Bluth</a>
-									<div class="media-text">
-										<input type="checkbox" checked />
-										Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-									</div>
-									<ul class="tags">
-										<li><a href="#" class="tag">task</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<!-- end item -->
-						<!-- begin item -->
-						<li class="list-group-item">
-							<div class="media">
-								<a href="#" class="pull-left">
-									<img class="media-object img-circle img-default" src="assets/images/avatars/buster_128.jpg" width="32" alt="...">
-								</a>
-								<div class="media-body">
-									<a href="#" class="text-date">11:05 AM</a>
-									<a href="#" class="media-heading">Buster Bluth</a>
-									<div class="media-text">
-										<div class="event pull-left">
-											<span class="month">Aug</span>
-											<span class="day">11</span>
-											<span class="year">2013</span>
-										</div>
-										Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-									</div>
-									<ul class="tags">
-										<li><a href="#" class="tag">event</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<!-- end item -->
-						<!-- begin item -->
-						<li class="list-group-item">
-							<div class="media">
-								<a href="#" class="pull-left">
-									<img class="media-object img-circle img-default" src="assets/images/avatars/gob_128.jpg" width="32" alt="...">
-								</a>
-								<div class="media-body">
-									<a href="#" class="text-date">11:05 AM</a>
-									<a href="#" class="media-heading">Gob Bluth</a>
-									<div class="media-text">
-										<a href="#" class="file-type file-type-doc pull-left">
-											doc
-										</a>
-										Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-									</div>
-									<ul class="tags">
-										<li><a href="#" class="tag">file</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<!-- end item -->
-						<!-- begin item -->
-						<li class="list-group-item">
-							<div class="media">
-								<a href="#" class="pull-left">
-									<img class="media-object img-circle img-default" src="assets/images/avatars/george-michael_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-active" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
 									<a href="#" class="text-date">12:33 PM</a>
-									<a href="#" class="media-heading">George-Michael Bluth</a>
+									<a href="#" class="media-heading">Michael Bluth</a>
 									<div class="media-text">
 										<ul class="list-unstyled list-tasks">
 											<li>
-												<input type="checkbox" checked />
-												Cras sit amet nibh libero, in gravida nulla.
+												<label class="text-checked">
+													<input type="checkbox" checked />
+													Call George-Michael
+												</label>
 											</li>
 											<li>
-												<input type="checkbox" checked />
-												Cras sit amet nibh libero, in gravida nulla.
+												<label class="text-checked">
+													<input type="checkbox" checked />
+													Fire Barry
+												</label>
 											</li>
 											<li>
-												<input type="checkbox" />
-												Cras sit amet nibh libero, in gravida nulla.
+												<label>
+													<input type="checkbox" />
+													Cras sit amet nibh libero
+												</label>
 											</li>
 											<li>
-												<input type="checkbox" />
-												Cras sit amet nibh libero, in gravida nulla.
+												<label>
+													<input type="checkbox" />
+													Nemo enim ipsam voluptatem
+												</label>
+											</li>
+											<li>
+												<label>
+													<input type="checkbox" />
+													Nam libero tempore
+												</label>
 											</li>
 										</ul>
 									</div>
@@ -781,24 +783,22 @@
 						<li class="list-group-item">
 							<div class="media">
 								<a href="#" class="pull-left">
-									<img class="media-object img-circle img-default" src="assets/images/avatars/lindsay_128.jpg" width="32" alt="...">
+									<img class="media-object img-circle img-active" src="assets/images/avatars/michael_128.jpg" width="32" alt="...">
 								</a>
 								<div class="media-body">
-									<a href="#" class="text-date">05:43 PM</a>
-									<a href="#" class="media-heading">Lindsay Bluth</a>
+									<a href="#" class="text-date">02:33 PM</a>
+									<a href="#" class="media-heading">Michael Bluth</a>
 									<div class="media-text">
-										check out this awesome image:
-										<div class="thumbnail">
-											<div class="thumbnail-embed">
-												<img src="http://www.weeatfilms.com/wp-content/uploads/2013/06/Gob-Tobias-and-Lindsay-in-Arrested-Development-Season-4.jpg" />
-											</div>
-											<div class="caption">
-												<a href="http://www.weeatfilms.com/wp-content/uploads/2013/06/Gob-Tobias-and-Lindsay-in-Arrested-Development-Season-4.jpg" class="text-sm text-muted">http://www.weeatfilms.com/...Gob-Tobias-and-Lindsay-in-Arrested-Development-Season-4.jpg</a>
-											</div>
-										</div>
+										<h4>Talking to myself</h4>
+										<p>Here's a list of ideas</p>
+										<ol>
+											<li>First item</li>
+											<li>Second item</li>
+											<li>Third item</li>
+										</ol>
 									</div>
 									<ul class="tags">
-										<li><a href="#" class="tag">task</a></li>
+										<li><a href="#" class="tag">note</a></li>
 									</ul>
 								</div>
 							</div>
@@ -865,18 +865,29 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/application.js"></script>
 
-	<link href="assets/icheck/square/grey.css" rel="stylesheet">
+	<script>
+		$(".form-1").focusout(function(){
+			$('.list-group-item-1').toggle()
+			event.preventDefault();
+		});
+	</script>
+
+	<link href="assets/icheck/flat/green.css" rel="stylesheet">
 	<script src="assets/js/jquery.icheck.min.js"></script>
 	<script>
 	$(document).ready(function(){
 		$('input[type=checkbox], input[type=radio]').iCheck({
-			checkboxClass: 'icheckbox_square-grey',
-			radioClass: 'iradio_square-grey',
+			checkboxClass: 'icheckbox_flat-green',
+			radioClass: 'iradio_flat-green',
 			increaseArea: '20%' // optional
 		});
 	});
 	</script>
-
+	<script>
+		$("label").click(function(){
+			$(this).toggleClass("text-checked");
+		});
+	</script>
 	<link href="assets/css/stroll.min.css" rel="stylesheet">
 	<script src="assets/js/stroll.min.js"></script>
 	<script>

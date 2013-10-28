@@ -26,6 +26,11 @@ $(function(){
 		$(".header, .content").toggleClass("active");
 		return false;
 	});
+	// New Column
+	$("[data-toggle='slide']").click(function(){
+		$(".slide-column").toggleClass("active");
+		return false;
+	});
 	// Activate tooltip
     $("[data-toggle='tooltip'], .has-tooltip").tooltip({container: "body"});
     // Animate progress bars

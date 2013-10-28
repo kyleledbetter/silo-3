@@ -6667,6 +6667,9 @@ body {
 a:hover {
   text-decoration: none;
 }
+label {
+  font-weight: normal;
+}
 .panel {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -7016,6 +7019,21 @@ textarea.input-xs {
 /* iCheckbox */
 .text-center > [class*="icheckbox"] {
   margin: 0 auto;
+}
+.text-checked {
+  text-decoration: line-through;
+}
+.reveal-hover {
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+*:hover > .reveal-hover {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 /* jQuery UI */
 @-webkit-keyframes pulse {
@@ -10146,6 +10164,19 @@ body.body-aside {
 }
 .aside .tags {
   margin: 10px 0 0 20px;
+}
+/* Slides */
+.slide {
+  width: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.slide.active {
+  visibility: visible;
+}
+.slide.active.col-xs-4 {
+  width: 33.33333333333333%;
 }
 /* Panels */
 .panel > .btn-block {
