@@ -4739,7 +4739,7 @@ a.list-group-item .list-group-item-heading {
 a.list-group-item:hover,
 a.list-group-item:focus {
   text-decoration: none;
-  background-color: #dfdff9;
+  background-color: #e3e3f9;
 }
 .list-group-item.active,
 .list-group-item.active:hover,
@@ -6968,12 +6968,12 @@ fieldset[disabled] .btn-inverse.active {
   padding-bottom: 20px;
 }
 .list-group-striped > .list-group-item:nth-child(odd) {
-  background-color: #fdfdff;
+  background-color: #f9f9fe;
 }
 .list-group-striped > a.list-group-item:nth-child(odd):hover,
 .list-group-striped > a.list-group-item:nth-child(odd):focus {
   text-decoration: none;
-  background-color: #dfdff9;
+  background-color: #e3e3f9;
 }
 /* Panels */
 .panel-title {
@@ -7034,6 +7034,22 @@ textarea.input-xs {
   visibility: visible;
   opacity: 1;
   filter: alpha(opacity=100);
+}
+/* List Users */
+.list-users img {
+  -webkit-box-shadow: 0 0 0 0 #007f79;
+  box-shadow: 0 0 0 0 #007f79;
+  -webkit-filter: sepia(50%);
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+.list-users .active {
+  color: #007f79;
+}
+.list-users .active img {
+  -webkit-box-shadow: 0 0 3px 3px #007f79;
+  box-shadow: 0 0 3px 3px #007f79;
+  -webkit-filter: sepia(0%);
 }
 /* jQuery UI */
 @-webkit-keyframes pulse {
