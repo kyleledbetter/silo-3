@@ -46,20 +46,14 @@ $(function(){
 	});
 	// Activate tooltip
     $("[data-toggle='tooltip'], .has-tooltip").tooltip({container: "body"});
-    // Animate progress bars
-    $(function(){
-			$('.progress .progress-bar').each(function() {
-				var bar = $(this);
-				var perc = bar.attr("aria-valuenow");
-				var current_perc = 0;
-	            var progress = setInterval(function() {
-					if (current_perc>=perc) {
-						clearInterval(progress);
-					} else {
-						current_perc +=1;
-						bar.css('width', (current_perc)+'%');
-					}
-				}, 0);
-			});
-		});
+    // Display sequential chat items
+	var lis = $('.reveal-item').hide();
+	$('.items-reveal').click(function() {
+		var i = 0;
+		(function displayItems() {
+			var number = 3000 + Math.floor(Math.random() * 3);
+			lis.eq(i++).fadeIn(number, displayItems);
+		})();
+	});
+
 });
