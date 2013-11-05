@@ -40,7 +40,7 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -145,7 +145,7 @@
 // Forms
 // -------------------------
 
-@input-bg:                       @list-group-bg;
+@input-bg:                       lighten(@list-group-bg, 10%);
 @input-bg-disabled:              darken(@panel-footer-bg, 3%);
 
 @input-color:                    @text-color;
@@ -162,7 +162,7 @@
 @legend-color:                   @gray-dark;
 @legend-border-color:            #e5e5e5;
 
-@input-group-addon-bg:           @gray-lighter;
+@input-group-addon-bg:           @list-group-bg;
 @input-group-addon-border-color: @input-border;
 
 
@@ -442,14 +442,14 @@
 // -------------------------
 @modal-inner-padding:         20px;
 
-@modal-title-padding:         15px;
+@modal-title-padding:         12px;
 @modal-title-line-height:     @line-height-base;
 
-@modal-content-bg:                             @list-group-bg;
+@modal-content-bg:                             lighten(@list-group-bg, 5%);
 @modal-content-border-color:                   rgba(0,0,0,.1);
 @modal-content-fallback-border-color:          #666;
 
-@modal-backdrop-bg:           #FFF;
+@modal-backdrop-bg:           #475B4F;
 @modal-header-border-color:   #e5e5e5;
 @modal-footer-border-color:   @modal-header-border-color;
 
@@ -491,7 +491,7 @@
 
 // List group
 // -------------------------
-@list-group-bg:               #f0f0fc;
+@list-group-bg:               #efeff2;
 @list-group-border:           @panel-inner-border;
 @list-group-border-radius:    @border-radius-base;
 

@@ -1,8 +1,4 @@
 $(function(){
-	// Scroll to bottom
-	$(window).load(function() {
-		$(".panel > .list-group").animate({ scrollTop: $('.list-group')[0].scrollHeight}, 1000);
-	});
 	// sidebar Toggle
 	$(".sidebar-toggle").click(function(){
 		$(".sidebar").toggleClass("active");
@@ -51,9 +47,21 @@ $(function(){
 	$('.items-reveal').click(function() {
 		var i = 0;
 		(function displayItems() {
-			var number = 3000 + Math.floor(Math.random() * 3);
-			lis.eq(i++).fadeIn(number, displayItems);
+			lis.eq(i++).fadeIn(2500, displayItems);
 		})();
 	});
-
+	// Scroll to bottom
+	$(window).load(function() {
+		$(".panel > .list-group").animate({ scrollTop: $('.list-group').prop("scrollHeight")}, 1000);
+	});
+	// Leave Chat
+	$(".leave-chat").click(function(){
+		$(this).closest("[class^='col-']").remove();
+		return false;
+	});
+	// Close App
+	$(".close-app").click(function(){
+		$(".content").remove();
+		return false;
+	});
 });

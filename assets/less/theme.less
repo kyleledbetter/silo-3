@@ -248,7 +248,8 @@ label {
 }
 /* Media */
 .media-text {
-  color: lighten(@gray, 18%);
+  color: lighten(@gray, 16%);
+  font-size: 13px;
 }
 .media-heading {
   font-weight: 500;
@@ -326,6 +327,46 @@ label {
   	border-top-color: @brand-inverse-dark;
   }
 }
+/* Panel Avatar */
+.panel-avatar {
+  position: relative;
+  overflow: hidden;
+
+  .icon-cog {
+    color: #FFF;
+    position: absolute;
+    left: 13px;
+    top: -4px;
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    .opacity (0);
+    .transition (all 0.4s ease-in-out);
+  }
+  img {
+    .transition (all 0.4s ease-in-out);
+  }
+  &:hover {
+    .icon-cog {
+      transform:rotateY(0deg);
+      -webkit-transform:rotateY(0deg);
+      .opacity (1);
+      z-index: 1;
+    }
+    img {
+      transform:rotateY(180deg);
+      -webkit-transform:rotateY(180deg);
+      .opacity (0.5);
+    }
+  }
+}
+/* Sortable */
+.ui-state-default {
+  .panel-heading {
+    &:hover {
+      cursor: move;
+    }
+  }
+}
 /* Forms */
 .form-control {
   .box-shadow (none);
@@ -366,6 +407,37 @@ label {
       -webkit-filter: sepia(0%);
     }
   }
+}
+/* App Controls */
+.btn-controls {
+  & > .btn-group {
+    & > a {
+      & > span {
+        position: relative;
+        & > span {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          .opacity (0);
+
+          &.icon-close {
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+      *:hover > & > span > span {
+        .opacity (0.4);
+      }
+    }
+  }
+}
+/* Forms */
+.form-horizontal .control-label {
+  text-align: left;
+}
+.input-group-addon {
+  border-radius: 0;
 }
 /* jQuery UI */
 @-webkit-keyframes pulse {
