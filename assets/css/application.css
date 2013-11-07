@@ -7007,7 +7007,7 @@ fieldset[disabled] .btn-inverse.active {
   color: #FFF;
   position: absolute;
   left: 13px;
-  top: -4px;
+  top: -6px;
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   opacity: 0;
@@ -7115,6 +7115,15 @@ textarea.input-xs {
 }
 .input-group-addon {
   border-radius: 0;
+}
+/* Modal Blur */
+.modal-open > div {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+.modal-open > .modal {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
 }
 /* jQuery UI */
 @-webkit-keyframes pulse {
