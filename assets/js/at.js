@@ -19,7 +19,7 @@ var emojis = [
     "womans_hat", "womens", "x", "yellow_heart", "zap", "zzz", "+1",
     "-1"
 ]
-var names = ["Jacob","Isabella","Ethan","Emma","Michael","Olivia","Alexander","Sophia","William","Ava","Joshua","Emily","Daniel","Madison","Jayden","Abigail","Noah","Chloe","你好","你你你"];
+var names = ["file","task","event","link","code","map","video","bananastand","lawbomb","bluths","problems","priorities","site"];
 
 var names = $.map(names,function(value,i) {
     return {'id':i,'name':value,'email':value+"@email.com"};
@@ -27,7 +27,7 @@ var names = $.map(names,function(value,i) {
 var emojis = $.map(emojis, function(value, i) {return {key: value, name:value}});
 
 $(function(){
-    $inputor = $('.form-1').atwho({
+    $inputor = $("[class^='form-']").atwho({
         at: "@",
         // data: names,
         data: "assets/data/at.json",
@@ -40,7 +40,7 @@ $(function(){
     }).atwho({
         at: "#",
         data: names,
-        tpl: "<li data-value='#${name}'> issues${id} from ${name}</li>"
+        tpl: "<li data-value='#${name}'> ${name}</li>"
     }).atwho({
         at: ":",
         data: emojis,
